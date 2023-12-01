@@ -9,7 +9,7 @@ private_cidr1 = "10.0.1.0/24"
 private_cidr2 = "10.0.2.0/24"
 private_cidr3 = "10.0.3.0/24"
 
-ssl_cert       = "xxx" #use your ssl certificate
+ssl_cert       = "xxx"            #use your ssl certificate
 db_credentials = "weasel_crm_rds" #use your secret in AWS Secrets Manager
 s3_bucket_name = "weasel-crm-bucket-rodent"
 
