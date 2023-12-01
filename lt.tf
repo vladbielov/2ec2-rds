@@ -1,8 +1,8 @@
 resource "aws_launch_template" "weasel_crm_lt" {
   name_prefix            = "weasel-crm-lt"
-  image_id               = "${data.aws_ami.ubuntu.id}"
+  image_id               = data.aws_ami.ubuntu.id
   instance_type          = "t2.micro"
-  vpc_security_group_ids = ["${aws_security_group.weasel_crm_sg.id}"]
+  vpc_security_group_ids = [aws_security_group.weasel_crm_sg.id]
 
   tags = {
     Name = "Weasel CRM Project"

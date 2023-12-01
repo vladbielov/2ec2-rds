@@ -14,14 +14,14 @@ resource "aws_elb" "weasel_crm_elb" {
     lb_port           = 80
     lb_protocol       = "http"
   }
-#Uncommit for using https
- #   listener {
- #   instance_port      = 80
- #   instance_protocol  = "http"
- #   lb_port            = 443
- #   lb_protocol        = "https"
- #   ssl_certificate_id = var.ssl_cert
- # }
+  #Uncommit for using https
+  #   listener {
+  #   instance_port      = 80
+  #   instance_protocol  = "http"
+  #   lb_port            = 443
+  #   lb_protocol        = "https"
+  #   ssl_certificate_id = var.ssl_cert
+  # }
 
   health_check {
     healthy_threshold   = 2
@@ -42,6 +42,6 @@ resource "aws_elb" "weasel_crm_elb" {
 }
 
 resource "aws_autoscaling_attachment" "asg_attachment_bar" {
-  autoscaling_group_name = "${aws_autoscaling_group.weasel_crm_asg.id}"
-  elb                    = "${aws_elb.weasel_crm_elb.id}"
+  autoscaling_group_name = aws_autoscaling_group.weasel_crm_asg.id
+  elb                    = aws_elb.weasel_crm_elb.id
 }

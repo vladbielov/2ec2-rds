@@ -1,7 +1,7 @@
 # VPC
 resource "aws_vpc" "weasel_crm_vpc" {
   cidr_block = var.cidr_block
-  tags = var.tags
+  tags       = var.tags
 }
 
 #Private Subnets

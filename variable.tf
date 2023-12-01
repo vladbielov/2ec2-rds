@@ -12,7 +12,5 @@ variable "desired_capacity" {}
 variable "ssl_cert" {}
 variable "db_credentials" {}
 variable "s3_bucket_name" {}
-variable "state_bucket" {}
-variable "dynamodb_table" {}
 
 variable "tags" {}

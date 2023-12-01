@@ -26,9 +26,9 @@ resource "aws_security_group" "weasel_crm_rds_sg" {
   vpc_id = aws_vpc.weasel_crm_vpc.id
 
   ingress {
-    from_port   = 3306
-    to_port     = 3306
-    protocol    = "tcp"
+    from_port       = 3306
+    to_port         = 3306
+    protocol        = "tcp"
     security_groups = [aws_security_group.weasel_crm_sg.id]
   }
   tags = {
