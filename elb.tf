@@ -14,7 +14,7 @@ resource "aws_elb" "weasel_crm_elb" {
     lb_port           = 80
     lb_protocol       = "http"
   }
-
+#Uncommit for using https
  #   listener {
  #   instance_port      = 80
  #   instance_protocol  = "http"

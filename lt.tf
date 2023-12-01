@@ -2,8 +2,6 @@ resource "aws_launch_template" "weasel_crm_lt" {
   name_prefix            = "weasel-crm-lt"
   image_id               = "${data.aws_ami.ubuntu.id}"
   instance_type          = "t2.micro"
-  #key_name               = "${aws_key_pair.class.key_name}"
-  #user_data              = "${base64encode(data.template_file.init.rendered)}"
   vpc_security_group_ids = ["${aws_security_group.weasel_crm_sg.id}"]
 
   tags = {

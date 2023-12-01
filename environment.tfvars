@@ -11,7 +11,7 @@ private_cidr3               =   "10.0.3.0/24"
 
 ssl_cert                    =   ""
 db_credentials              =   "weasel_crm_rds" #use your own secret in AWS Secrets Manager
-s3_bucket_name              =   "weasel-crm-bucket-rodent"
+s3_bucket_name              =   "weasel-crm-bucket-rodent" 
 
 max_size                    =   "2"
 min_size                    =   "2"

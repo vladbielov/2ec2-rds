@@ -5,10 +5,10 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket         = "weasel-crm-state-bucket"
+    bucket         = "weasel-crm-state-bucket" #use name of your bucket
     key            = "path/to/my/tfstate"
     region         = "us-east-1"
-    dynamodb_table = "weasel-crm-dynamodb"
+    dynamodb_table = "weasel-crm-dynamodb" #use name of your DynamoDB
     encrypt        = true
   }
 }
