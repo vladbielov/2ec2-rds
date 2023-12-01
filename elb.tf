@@ -1,11 +1,11 @@
 resource "aws_elb" "weasel_crm_elb" {
   name            = "weasel-crm-elbs"
-  security_groups = ["${aws_security_group.weasel_crm_sg.id}"]
+  security_groups = [aws_security_group.weasel_crm_sg.id]
 
   subnets = [
-    "${aws_subnet.weasel_crm_public1.id}",
-    "${aws_subnet.weasel_crm_public2.id}",
-    "${aws_subnet.weasel_crm_public3.id}",
+    aws_subnet.weasel_crm_public1.id,
+    aws_subnet.weasel_crm_public2.id,
+    aws_subnet.weasel_crm_public3.id,
   ]
 
   listener {

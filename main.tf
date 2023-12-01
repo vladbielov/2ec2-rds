@@ -1,3 +1,13 @@
+terraform {
+  required_version = ">= 0.12.0"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
 provider "aws" {
   region = var.region
 }
@@ -5,10 +15,10 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket         = "weasel-crm-state-bucket" #use name of your bucket
+    bucket         = "weasel-crm-state-bucket" #name of your bucket
     key            = "path/to/my/tfstate"
     region         = "us-east-1"
-    dynamodb_table = "weasel-crm-dynamodb" #use name of your DynamoDB
+    dynamodb_table = "weasel-crm-dynamodb" #name of your DynamoDB
     encrypt        = true
   }
 }
